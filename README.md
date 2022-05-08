@@ -1,3 +1,9 @@
+
+## AWS Amplify のウェブホスティングサービスを使って React アプリをクラウドにデプロイ
+
+- [デプロイ手順](https://aws.amazon.com/jp/getting-started/hands-on/build-react-app-amplify-graphql/module-one/)
+- [デプロイ先](https://main.d34k4jq16mw0jy.amplifyapp.com/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
