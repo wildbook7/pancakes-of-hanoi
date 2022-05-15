@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import strawberry from './strawberry.png';
 import './App.css';
 import Button from '@mui/material/Button'
 
@@ -7,20 +7,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        パンケーキを右の皿へ移そう！
+        <img src={strawberry} alt="strawberry" style={{ width: "50px"}} />
         <p>
-          <Button variant="contained">Hello mui</Button>
+          <Button variant="contained">再チャレンジ</Button>
           <br />
-          Edit <code>src/App.tsx</code>(v2) and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
       </header>
     </div>
   );

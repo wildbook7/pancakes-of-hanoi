@@ -1,4 +1,7 @@
 
+
+[イラスト素材：イチゴ](https://www.ac-illust.com/main/detail.php?id=22710558&word=%E3%82%A4%E3%83%81%E3%82%B4%E3%80%80%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84%E3%80%80%E6%98%A5)
+
 ## AWS Amplify のウェブホスティングサービスを使って React アプリをクラウドにデプロイ
 
 - [デプロイ手順](https://aws.amazon.com/jp/getting-started/hands-on/build-react-app-amplify-graphql/module-one/)
