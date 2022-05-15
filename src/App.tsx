@@ -3,6 +3,14 @@ import strawberry from './strawberry.png';
 import './App.css';
 import Button from '@mui/material/Button'
 import Paper from '@mui/material/Paper'
+import Stack from '@mui/material/Stack'
+import { styled } from '@mui/material/styles'
+
+const CustomPaper = styled(Paper)(() => ({
+  backgroundColor: 'khaki',
+  elevation: 4,
+  fontSize: '16px',
+}))
 
 function App() {
   return (
@@ -15,27 +23,11 @@ function App() {
           top: "12px",
           left: "3px",
         }} />
-        <Paper elevation={2} sx={{
-          backgroundColor: 'wheat',
-          border: '1px brown',
-          width: '50px',
-        }}>
-          &nbsp;
-        </Paper>
-        <Paper elevation={2} sx={{
-          backgroundColor: 'wheat',
-          border: '1px brown',
-          width: '75px',
-        }}>
-          &nbsp;
-        </Paper>
-        <Paper elevation={2} sx={{
-          backgroundColor: 'wheat',
-          border: '1px brown',
-          width: '100px',
-        }}>
-          &nbsp;
-        </Paper>
+        <Stack spacing={0.3} alignItems="center">
+          <CustomPaper sx={{ width: '50px' }}>&nbsp;</CustomPaper>
+          <CustomPaper sx={{ width: '75px' }}>&nbsp;</CustomPaper>
+          <CustomPaper sx={{ width: '100px' }}>&nbsp;</CustomPaper>
+        </Stack>
         <p>
           <Button variant="contained">再チャレンジ</Button>
           <br />
