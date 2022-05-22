@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        パンケーキを右の皿へ移そう！
+        [開発中] パンケーキを右の皿へ移そう！
         <Grid container spacing={2} sx={{ width: '800px' }}>
           <Grid item xs={2.1}></Grid>
           <Grid item xs={2.6}>
@@ -67,12 +67,37 @@ function App() {
               )}
             </Stack>
           </Grid>
+          <Grid item xs={2.1}></Grid>
+          <Grid item xs={2.1}></Grid>
+          <Grid item xs={1.3}></Grid>
+          <Grid item xs={1.3}>
+            <Button variant="contained" onClick={ change }>&nbsp;--&gt;&nbsp;</Button>
+          </Grid>
+          <Grid item xs={1.3}>
+            <Button variant="contained" onClick={ change }>&nbsp;&lt;--&nbsp;</Button>
+          </Grid>
+          <Grid item xs={1.3}>
+            <Button variant="contained" onClick={ change }>&nbsp;--&gt;&nbsp;</Button>
+          </Grid>
+          <Grid item xs={1.3}>
+            <Button variant="contained" onClick={ change }>&nbsp;&lt;--&nbsp;</Button>
+          </Grid>
+          <Grid item xs={1.3}></Grid>
+          <Grid item xs={2.1}></Grid>
+          <Grid item xs={2.1}></Grid>
+          <Grid item xs={1.3}></Grid>
+          <Grid item xs={1.3}>
+            <Button variant="contained" onClick={ change }>----&gt;</Button>
+          </Grid>
+          <Grid item xs={2.6}></Grid>
+          <Grid item xs={1.3}>
+            <Button variant="contained" onClick={ change }>&lt;----</Button>
+          </Grid>
         </Grid>
         <p>
           <Button variant="contained" onClick={ change }>再チャレンジ</Button>
           <br />
         </p>
-        <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
