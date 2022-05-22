@@ -14,6 +14,9 @@ const CustomPaper = styled(Paper)(() => ({
 }))
 
 function App() {
+  const [leftPlate, setLeftPlate] = useState([1,2,3,4])
+  const [middlePlate, setMiddlePlate] = useState([0,0,0,0])
+  const [rightPlate, setRightPlate] = useState([0,0,0,0])
   const [strawberryFlag, setStrawberryFlag] = useState(false)
 
   const change = () => setStrawberryFlag(!strawberryFlag)
@@ -26,18 +29,24 @@ function App() {
           <Grid item xs={2.1}></Grid>
           <Grid item xs={2.6}>
           <Stack spacing={0.3} alignItems={'center'} justifyContent={'flex-end'} sx={{ height: '120px' }}>
-              <CustomPaper sx={{ width: '50px' }}>&nbsp;</CustomPaper>
-              <CustomPaper sx={{ width: '75px' }}>&nbsp;</CustomPaper>
-              <CustomPaper sx={{ width: '100px' }}>&nbsp;</CustomPaper>
-              <CustomPaper sx={{ width: '125px' }}>&nbsp;</CustomPaper>
-            </Stack>
+            {leftPlate.map( value =>
+              <CustomPaper
+                sx={ value === 0 ? {visibility: 'hidden'} : { width: `${25 * (value + 1)}px` }}
+              >
+                &nbsp;
+              </CustomPaper>
+            )}
+          </Stack>
           </Grid>
           <Grid item xs={2.6}>
           <Stack spacing={0.3} alignItems={'center'} justifyContent={'flex-end'} sx={{ height: '120px' }}>
-              <CustomPaper sx={{ width: '50px' }}>&nbsp;</CustomPaper>
-              <CustomPaper sx={{ width: '75px' }}>&nbsp;</CustomPaper>
-              <CustomPaper sx={{ width: '100px' }}>&nbsp;</CustomPaper>
-              <CustomPaper sx={{ width: '125px' }}>&nbsp;</CustomPaper>
+            {middlePlate.map( value =>
+                <CustomPaper
+                  sx={ value === 0 ? {visibility: 'hidden'} : { width: `${25 * (value + 1)}px` }}
+                >
+                  &nbsp;
+                </CustomPaper>
+              )}
             </Stack>
           </Grid>
           <Grid item xs={2.6}>
@@ -49,10 +58,13 @@ function App() {
                 left: "5px",
                 visibility: strawberryFlag? "visible" : "hidden",
               }} />
-              <CustomPaper sx={{ width: '50px' }}>&nbsp;</CustomPaper>
-              <CustomPaper sx={{ width: '75px' }}>&nbsp;</CustomPaper>
-              <CustomPaper sx={{ width: '100px' }}>&nbsp;</CustomPaper>
-              <CustomPaper sx={{ width: '125px' }}>&nbsp;</CustomPaper>
+              {rightPlate.map( value =>
+                <CustomPaper
+                  sx={ value === 0 ? {visibility: 'hidden'} : { width: `${25 * (value + 1)}px` }}
+                >
+                  &nbsp;
+                </CustomPaper>
+              )}
             </Stack>
           </Grid>
         </Grid>
