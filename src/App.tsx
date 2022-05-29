@@ -14,12 +14,27 @@ const CustomPaper = styled(Paper)(() => ({
 }))
 
 function App() {
-  const [leftPlate, setLeftPlate] = useState([1,2,3,4])
-  const [middlePlate, setMiddlePlate] = useState([0,0,0,0])
-  const [rightPlate, setRightPlate] = useState([0,0,0,0])
+  const [plates, setPlates] = useState([[1,2,3,4],[0,0,0,0],[0,0,0,0]])
   const [strawberryFlag, setStrawberryFlag] = useState(false)
 
   const change = () => setStrawberryFlag(!strawberryFlag)
+
+  const move = (src: number, dst: number) => {
+    const newPlates = plates.slice()
+    labelMoved:
+    for (let i = 0; i < newPlates[src].length; i++) {
+      if (!(newPlates[src][i])) continue
+      for (let j = newPlates[dst].length - 1; j >= 0 ; j--) {
+        if (newPlates[dst][j]) continue
+        //
+        newPlates[dst][j] = newPlates[src][i]
+        newPlates[src][i] = 0
+
+        setPlates(newPlates)
+        break labelMoved
+      }
+    }
+  }
 
   return (
     <div className="App">
@@ -29,7 +44,7 @@ function App() {
           <Grid item xs={2.1}></Grid>
           <Grid item xs={2.6}>
           <Stack spacing={0.3} alignItems={'center'} justifyContent={'flex-end'} sx={{ height: '120px' }}>
-            {leftPlate.map( value =>
+            {plates[0].map( value =>
               <CustomPaper
                 sx={ value === 0 ? {visibility: 'hidden'} : { width: `${25 * (value + 1)}px` }}
               >
@@ -40,7 +55,7 @@ function App() {
           </Grid>
           <Grid item xs={2.6}>
           <Stack spacing={0.3} alignItems={'center'} justifyContent={'flex-end'} sx={{ height: '120px' }}>
-            {middlePlate.map( value =>
+            {plates[1].map( value =>
                 <CustomPaper
                   sx={ value === 0 ? {visibility: 'hidden'} : { width: `${25 * (value + 1)}px` }}
                 >
@@ -58,7 +73,7 @@ function App() {
                 left: "5px",
                 visibility: strawberryFlag? "visible" : "hidden",
               }} />
-              {rightPlate.map( value =>
+              {plates[2].map( value =>
                 <CustomPaper
                   sx={ value === 0 ? {visibility: 'hidden'} : { width: `${25 * (value + 1)}px` }}
                 >
@@ -71,13 +86,13 @@ function App() {
           <Grid item xs={2.1}></Grid>
           <Grid item xs={1.3}></Grid>
           <Grid item xs={1.3}>
-            <Button variant="contained" onClick={ change }>&nbsp;--&gt;&nbsp;</Button>
+            <Button variant="contained" onClick={ () => move(0, 1) }>&nbsp;--&gt;&nbsp;</Button>
           </Grid>
           <Grid item xs={1.3}>
             <Button variant="contained" onClick={ change }>&nbsp;&lt;--&nbsp;</Button>
           </Grid>
           <Grid item xs={1.3}>
-            <Button variant="contained" onClick={ change }>&nbsp;--&gt;&nbsp;</Button>
+            <Button variant="contained" onClick={ () => move(1, 2) }>&nbsp;--&gt;&nbsp;</Button>
           </Grid>
           <Grid item xs={1.3}>
             <Button variant="contained" onClick={ change }>&nbsp;&lt;--&nbsp;</Button>
@@ -106,4 +121,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
