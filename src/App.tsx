@@ -111,39 +111,19 @@ function App() {
           <Grid item xs={2.1}></Grid>
 
           <Grid item xs={2.1}></Grid>
-          <Grid item xs={2.6}>
-            <CustomPaper2
-              sx={{
-                backgroundColor: 'seagreen',
-                borderRadius: '0px 0px 15px 15px',
-                height: '6px',
-                position: 'relative',
-                bottom: '9px'
-              }}
-            />
-          </Grid>
-          <Grid item xs={2.6}>
-            <CustomPaper2
-              sx={{
-                backgroundColor: 'seagreen',
-                borderRadius: '0px 0px 15px 15px',
-                height: '6px',
-                position: 'relative',
-                bottom: '9px'
-              }}
-            />
-          </Grid>
-          <Grid item xs={2.6}>
-            <CustomPaper2
-              sx={{
-                backgroundColor: 'seagreen',
-                borderRadius: '0px 0px 15px 15px',
-                height: '6px',
-                position: 'relative',
-                bottom: '9px'
-              }}
-            />
-          </Grid>
+          {[1,2,3].map((value) =>
+            <Grid key={value.toString()} item xs={2.6}>
+              <CustomPaper2
+                sx={{
+                  backgroundColor: 'seagreen',
+                  borderRadius: '0px 0px 15px 15px',
+                  height: '6px',
+                  position: 'relative',
+                  bottom: '14px'
+                }}
+              />
+            </Grid>
+          )}
           <Grid item xs={2.1}></Grid>
 
           <Grid item xs={2.1}></Grid>
