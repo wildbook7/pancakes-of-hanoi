@@ -1,6 +1,6 @@
 # ハノイのパンケーキ（ミニゲームアプリ）
 
-画像をクリックすると、アプリへ画面遷移します
+画像をクリックすると、アプリ画面が表示されます
 
 [<img src="/README.png">](https://main.d34k4jq16mw0jy.amplifyapp.com/)
 
