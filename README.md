@@ -11,6 +11,18 @@
 
 のルールのパズルゲームを、画面上のボタン操作で遊べるようにしたアプリです。
 
+使用している技術は
+
+- React (画面開発のベースとなる技術)
+- Material UI (マテリアルデザイン用のライブラリ)
+- AWS Amplify (ウェブホスティングサービス)
+
+で、パンケーキ部分は、Material UI の
+[Paper コンポーネント](https://mui.com/material-ui/react-paper/)
+を使っています。
+
+---
+
 ※　以下は、開発メモです　※
 
 [イラスト素材：イチゴ](https://www.ac-illust.com/main/detail.php?id=22710558&word=%E3%82%A4%E3%83%81%E3%82%B4%E3%80%80%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84%E3%80%80%E6%98%A5)
