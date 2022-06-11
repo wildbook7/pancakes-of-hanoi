@@ -1,5 +1,9 @@
 # ハノイのパンケーキ（ミニゲームアプリ）
 
+画像をクリックすると、アプリへ画面遷移します
+
+[<img src="/README.png">](https://main.d34k4jq16mw0jy.amplifyapp.com/)
+
 [ハノイの塔](https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%8E%E3%82%A4%E3%81%AE%E5%A1%94)という、
 
 - 一つずつ動かしていく
