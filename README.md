@@ -21,6 +21,23 @@
 [Paper コンポーネント](https://mui.com/material-ui/react-paper/)
 を使っています。
 
+## 今後の方針
+
+本アプリは画面切替なしのため、画面切替ありの別アプリ作成を考えています。
+
+また、AWS のデータベースも利用したいと考えています。
+
+Next (Reactでの開発を楽にしてくれるフレームワーク) を使うと、
+
+画面切替を楽に開発することが可能で、
+
+- ESLint (バグとなる可能性のあるコードパターンを検知するツール)
+- Prettier (コードを整形するツール)
+
+の組み合わせも、まとめて導入できる模様。
+[Next の公式ドキュメント](https://nextjs.org/docs/basic-features/eslint#usage-with-other-tools)
+
+
 ---
 
 ※　以下は、開発メモです　※
